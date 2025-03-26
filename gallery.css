@@ -1,0 +1,164 @@
+/* Gallery Page Specific Styles */
+
+body {
+  background-color: #f0f4f8;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-header h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gallery-header p {
+  font-size: 1.3rem;
+  color: var(--dark-color);
+  font-style: italic;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  background: var(--light-color);
+  color: var(--dark-color);
+  transition: all 0.3s;
+}
+
+.search-filter input:focus,
+.search-filter select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.artwork-display {
+  position: relative;
+  height: 220px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid var(--accent-color);
+}
+
+.artwork-hover {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.gallery-item:hover .artwork-hover {
+  display: block;
+}
+
+.btn-view {
+  padding: 10px 14px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-view:hover {
+  background: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.artwork-info {
+  padding: 18px;
+  text-align: center;
+}
+
+.artwork-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: var(--dark-color);
+}
+
+.artwork-author {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.artwork-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.category {
+  background: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+}
+
+.gallery-pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-page {
+  padding: 10px 14px;
+  margin: 5px;
+  background: var(--dark-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-page.active,
+.btn-page:hover {
+  background: var(--primary-color);
+  transform: scale(1.1);
+}

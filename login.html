@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Login page for users"/>
+    <title>User Login | CSS Art Gallery</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+		<a href="index.html" class="logo">
+			<div class="logo-icon"></div>
+			CSS Art Gallery
+		</a>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="submit.html">Submit Your Art</a></li>
+				<li><a href="guidelines.html">Submission Guidelines</a></li>
+			</ul>
+		</nav>
+		<div class="user-status">
+			<span id="user-display"></span>
+			<a href="login.html" id="login-btn" class="btn btn-primary" style="display: none;">Login</a> <!--TEST CASE: When on the login page, hide the login button on the header-->
+			<button id="logout-btn" class="btn btn-secondary" style="display: none;">Logout</button>
+		</div>
+	</div>
+    </header>
+
+    <main class="account-container">
+        <div class="form-toggle">
+            <button id="login-toggle" class="active">Login</button>
+            <button id="register-toggle">Register</button>
+        </div>
+        
+        <!-- Login Form -->
+        <form id="login-form" class="account-form">
+            <h2>Welcome Back!</h2>
+            <div class="form-group">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            <div class="form-group remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <button type="submit" class="btn-submit">Login</button>
+            <p class="form-message" id="login-message"></p>
+	    <!--<p class="form-link">Forgot your password? <a href="#">Reset it here</a></p>-->
+        </form>
+        
+        <!-- Registration Form -->
+        <form id="register-form" class="account-form" style="display: none;">
+            <h2>Create an Account</h2>
+            <div class="form-group">
+                <label for="register-username">Username</label>
+                <input type="text" id="register-username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" name="password" required>
+                <p class="password-requirements">Password must be at least 8 characters long and include a number and a special character.</p>
+            </div>
+            <div class="form-group">
+                <label for="register-confirm">Confirm Password</label>
+                <input type="password" id="register-confirm" name="confirm-password" required>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="guidelines.html#t-and-c">Terms and Conditions</a></label>
+            </div>
+            <button type="submit" class="btn-submit">Create Account</button>
+            <p class="form-message" id="register-message"></p>
+        </form>
+        
+        <div class="form-decoration">
+            <div class="deco-shape shape1"></div>
+            <div class="deco-shape shape2"></div>
+            <div class="deco-shape shape3"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+		<ul class="footer-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="submit.html">Submit Art</a></li>
+			<li><a href="guidelines.html">Guidelines</a></li>
+		</ul>
+		<p class="footer-text">&copy; 2025 CSS Art Gallery. All rights reserved</p>
+	</div>
+	<script src="login.js"></script>
+    </footer>
+</body>
+</html>

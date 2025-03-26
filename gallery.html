@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Gallery page to view the CSS art."/>
+    <title>Gallery | CSS Art Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="global.css">
+    <!--<link rel="stylesheet" href="submission-gallery-css.css">-->
+</head>
+<body>
+    <header>
+	    <div class="container header-container">
+		    <a href="index.html" class="logo">
+			    <div class="logo-icon"></div>
+			   CSS Art Gallery
+		    </a>
+		    <nav>
+			    <ul>
+				    <li><a href="index.html">Home</a></li>
+				    <li><a href="gallery.html" class="active">Gallery</a></li>
+				    <li><a href="submit.html">Submit Your Art</a></li>
+				    <li><a href="guidelines.html">Submission Guidelines</a></li>
+			    </ul>
+		    </nav>
+		    <div class="user-status">
+			    <span id="user-display"></span>
+			    <a href="login.html" id="login-btn" class="btn btn-primary">Login</a>
+			    <button id="logout-btn" class="btn btn-secondary" style="display: none;">Logout</button>
+		    </div>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-header">
+            <h2>CSS Art Gallery</h2>
+            <p>Discover amazing creations made with pure CSS</p>
+        </div>
+        
+        <div class="gallery-controls">
+            <div class="search-filter">
+                <input type="text" id="search-gallery" placeholder="Search artworks...">
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="illustration">Illustration</option>
+                    <option value="animation">Animation</option>
+                    <option value="interactive">Interactive</option>
+                    <option value="minimalist">Minimalist</option>
+                </select>
+                <select id="filter-sort">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+ 
+        </div>
+        
+        <div class="gallery-grid" id="gallery-container">
+         
+        </div>
+        
+        <div class="gallery-pagination">
+           <button class="btn-page active">1</button>
+            <button class="btn-page">2</button>
+            <button class="btn-page">3</button>
+            <span class="pagination-ellipsis">...</span>
+            <button class="btn-page">10</button>
+	    <button class="btn-next">Next &rarr;</button> 
+        </div>
+        
+        <!-- Modal for viewing artwork -->
+        <div class="artwork-modal" id="artwork-modal">
+            <div class="modal-content">
+                <button class="btn-close-modal">&times;</button>
+                <div class="modal-artwork-container">
+                    <div class="modal-artwork" id="modal-artwork-display">
+                        Artwork will be displayed here
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Artwork Title</h2>
+                    <p class="modal-author">by <a href="#" id="modal-author">Artist Name</a></p>
+                    
+                    <div class="modal-description">
+                        <h3>Description</h3>
+                        <p id="modal-description">Artwork description will appear here.</p>
+                    </div>
+                    
+                    <div class="modal-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Category:</span>
+                            <span id="modal-category">Category</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Created:</span>
+                            <span id="modal-date">Date</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Views:</span>
+                            <span id="modal-views">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button id="btn-like" class="btn-action">
+                            <span class="heart-icon"></span>
+                            <span id="like-count">0</span> Likes
+                        </button>
+                    </div>
+                    
+		    <h4>HTML Code:</h4>
+                    
+                    <div class="modal-code-content">
+                        <div class="code-tab-content active" id="html-tab">
+                            <pre><code id="modal-html-code">HTML code will appear here</code></pre>
+                            <button class="btn-copy" id="copy-html">Copy Code</button>
+                        </div>
+			<h4>CSS Code:</h4>
+                        <div class="code-tab-content" id="css-tab">
+                            <pre><code id="modal-css-code">CSS code will appear here</code></pre>
+                            <button class="btn-copy" id="copy-css">Copy Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="container footer-content">
+		<ul class="footer-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="submit.html">Submit Art</a></li>
+			<li><a href="guidelines.html">Guidelines</a></li>
+		</ul>
+		<p class="footer-text">&copy; 2025 CSS Art Gallery. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

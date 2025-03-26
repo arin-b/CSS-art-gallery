@@ -1,2 +1,191 @@
 <!DOCTYPE html>
-<html></html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="The CSS Art Gallery Home page."/>
+		<link rel="stylesheet" href="index.css"/>
+		<link rel="stylesheet" href="global.css">
+		<title>Home - CSS Art Gallery</title>
+	</head>
+	<body>
+		<header>
+			<div class="container header-container">
+				<a href="index.html" class="logo">
+					<div class="logo-icon"></div>
+					CSS Art Gallery
+				</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="submit.html">Submit Your Art</a></li>
+						<li><a href="guidelines.html">Submission Guidelines</a></li>
+					</ul>
+				</nav>
+				<div class="user-status">
+					<span id="user-display"></span>
+					<a href="login.html" id="login-btn" class="btn btn-primary">Login</a>
+					<button id="logout-btn" class="btn btn-secondary" style="display: none;">Logout</button>
+				</div>
+			</div>
+		</header>
+
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>Pixel Perfect Art, Crafted with CSS</h1>
+					<p>Discover a world where every pixel is meticulously crafted using the power of CSS. Browse our curated collection of masterpieces and experience how creativity and technology come together in perfect harmony.</p>
+					<div class="hero-buttons">
+						<a href="gallery.html" class="btn btn-primary">Explore Gallery</a>
+						<a href="submit.html" class="btn btn-secondary">Submit Artwork</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+                 	       <div class="section-header">
+				       <h2 class="section-title">Why CSS Art?</h2>
+				       <p class="section-description">CSS is not just for styling websites - it is a powerful tool for creating incredible artwork. Join our community and showcase your creative coding skills.</p>
+			       </div>
+			       <div class="features">
+				       <div class="feature-card">
+					       <h3>Showcase Creativity</h3>
+					       <p>Display your artwork in our gallery and get recognition from the developer community. Push the boundaries of what's possible with CSS</p>
+					       <a href="submit.html" class="btn btn-primary">Submit Your Art</a>
+				       </div>
+				       <div class="feature-card">
+					       <h3>Learn New Techniques</h3>
+					       <p>Explore complex CSS techniques through practical examples. Each artwork comes with viewable source code to help you learn</p>
+					       <a href="gallery.html" class="btn btn-primary">View the Gallery</a>
+				       </div>
+				       <div class="feature-card">
+					       <h3>Join a Community</h3>
+					       <p>Connect with fellow developers who share your passion for creative coding and CSS artistry.</p>
+					       <a href="login.html" class="btn btn-primary">Get started</a>
+			       </div>
+		</section>
+
+		<!--Featured Artwork-->
+		<section>
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title">Featured Artwork</h2>
+					<p class="section-description">check out some of the amazing CSS art submitted by our community members.</p>
+				</div>
+				<div class="gallery-grid">
+					<div class="artwork-item">
+						<div class="art-display">
+							<div class="art-preview">
+								<style>
+.featured-art-1{
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(to top, #ff9966, #ff5e62, #ff0099);
+	border-radius: 50%;
+	position: relative;
+}
+.featured-art-1:after{
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	width: 200px;
+	height: 20px;
+	background: #333;
+}
+								</style>
+								<div class="featured-art-1"></div>
+							</div>
+						</div>
+						<div class="artwork-info">
+							<h3>CSS Sunset</h3>
+							<p class="artwork-artist">By: parth</p>
+							<p class="artwork-description">A beautiful sunset created with CSS gradients</p>
+						</div>
+					</div>
+					         <div class="artwork-item">
+           <div class="art-display">
+             <div class="art-preview">
+               <style>
+                 .featured-art-2 {
+                   width: 200px;
+                   height: 200px;
+                   background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+                   position: relative;
+                 }
+                 .featured-art-2:before {
+                   content: '';
+                   position: absolute;
+                   bottom: 0;
+                   left: 0;
+                  width: 200px;
+                   height: 100px;
+                   background: linear-gradient(135deg, #32CD32, #228B22);
+                   clip-path: polygon(0 80%, 25% 40%, 50% 60%, 75% 20%, 100% 50%, 100% 100%, 0 1    00%);
+                 }
+               </style>
+               <div class="featured-art-2"></div>
+             </div>
+	               </div>
+           <div class="artwork-info">
+             <h3>CSS Landscape</h3>
+             <p class="artwork-artist">By: rushikesh</p>
+             <p class="artwork-description">A mountain landscape using CSS shapes</p>
+           </div>
+         </div>
+         <div class="artwork-item">
+           <div class="art-display">
+             <div class="art-preview">
+               <style>
+                 .featured-art-3 {
+                   width: 150px;
+                   height: 150px;
+                   background-color: #f3ac3c;
+                   border-radius: 50%;
+                   position: relative;
+                   transform: rotate(-30deg);
+                 }
+		                  .featured-art-3::before {
+                   content: "";
+                   position: absolute;
+                   width: 150px;
+                   height: 150px;
+                   background-color: #1a4341;
+                   border-radius: 50%;
+                   top: 0;
+                   left: 0;
+                   clip-path: polygon(50% 0%, 50% 100%, 100% 100%, 100% 0%);
+                 }
+               </style>
+               <div class="featured-art-3"></div>
+             </div>
+           </div>
+           <div class="artwork-info">
+             <h3>CSS Moon Phase</h3>
+             <p class="artwork-artist">By: arindam</p>
+             <p class="artwork-description">A simple yet elegant moon phase created with CSS</p>
+           </div>
+         </div>
+
+
+				</div>
+			</div>
+		</section>
+
+		<!--Footer-->
+		<footer>
+			<div class="container footer-content">
+				<ul class="footer-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="submit.html">Submit Art</a></li>
+					<li><a href="guidelines.html">Guidelines</a></li>
+				</ul>
+				<p class="footer-text">&copy; 2025 CSS Art Gallery. All rights reserved</p>
+			</div>
+		</footer>
+		<script src="index.js"></script>
+	</body>
+</html>
