@@ -3,6 +3,8 @@ This repository contains the files for creating a front-end for a CSS Art Galler
 
 You can create an account/login. While logged in, you can submit your own artwork, view and like other artworks anddelete any artwork you have previously uploaded. While logged out, you can only view the artworks.
 
+In the 'sample-arts' folder, there are 9 sample artwork that you can use. These have been generated using ChatGPT and I do not claim ownership of it. Each artwork has 2 pages: HTML and CSS of the same name.
+
 ### Note:
 There is no backend connectivity. All data is stored locally in your browser's local storage. **This is NOT secure.** It has been used here since this is a dummy project created for a college assignment. If you wish to actually use any of this code seriously, consider connecting it to a database. But if you just want to play around, it is fine just as it is. Be careful not to store or upload any sensitive information on it.
 
