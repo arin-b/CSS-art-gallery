@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffcc00;
+    transition: background 0.5s;
+}
+
+.sun-moon {
+    width: 80px;
+    height: 80px;
+    background: yellow;
+    border-radius: 50%;
+    transition: background 0.5s;
+}
+
+.night {
+    background: #1a1a2e;
+}
+
+.night .sun-moon {
+    background: white;
+}

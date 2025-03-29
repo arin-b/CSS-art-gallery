@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    background-color: black; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.artwork-container {
+    position: relative; /* For absolute positioning of elements inside */
+    width: 400px;
+    height: 400px;
+}
+
+.circle, .square {
+    position: absolute;
+    background: linear-gradient(45deg, #ff6b6b, #f9c851); /* Vibrant gradient */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make it a circle */
+    top: 50px;
+    left: 50px;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    top: 200px;
+    right: 60px;
+    transform: rotate(20deg); /* Slightly rotate the square */
+}
+
+.circle-small {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Different gradient */
+    top: 250px;
+    left: 20px;
+    transform: translate(20px, -10px); /* Small offset */
+}
+
+.square-small {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #4ecdc4, #556270); /* Another gradient */
+    bottom: 30px;
+    right: 150px;
+    transform: rotate(-15deg);
+}
